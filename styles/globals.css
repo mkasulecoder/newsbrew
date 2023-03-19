@@ -7,14 +7,47 @@ body {
 }
 
 a {
-  color: inherit;
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
+.navbar{
+  min-height:10vh;
+}
+.nav-item{
+  color: aqua !important;
+}
 
+.text-aqua{
+  color: aqua !important;
+}
+
+.bg-aqua{
+background-color: aqua !important;;
+}
+aside{
+  height: 90vh;
+  overflow-y: none;
+}
+
+main{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 760px){
+    aside{
+    height: 10vh;
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
