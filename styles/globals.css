@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
-
+h1, h2, h3{
+  font-weight: 700 !important;
+}
+.fs-7{
+  font-size: 0.7rem;
+}
 a {
   color: teal;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -19,41 +25,87 @@ a:hover {
 * {
   box-sizing: border-box;
 }
-.navbar{
-  min-height:10vh;
-}
-.nav-item{
-  color: aqua !important;
-}
+
 
 .text-aqua{
+  color: teal !important;
+}
+
+.text-teal{
   color: aqua !important;
+}
+.text-gray{
+  color: gray !important;
+}
+
+.text-blue{
+  color: rgb(44, 98, 232) !important;
 }
 
 .bg-aqua{
 background-color: aqua !important;;
 }
-aside{
+
+.bg-gray-200{
+  background-color: rgb(237, 235, 235);
+}
+.bg-gray-100{
+  background-color: rgb(218, 218, 218);
+}
+.navbar{
+  min-height:10vh;
+}
+.nav-item{
+  color: gray !important;
+  font-weight: 600 !important;
+}
+.nav-item:hover{
+  color: teal !important;
+}
+.main-section{
   height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+aside{
   overflow-y: none;
+  flex:1;
 }
 
 main{
+   flex:3;
+   border-radius: 0.5rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+span{
+  font-size: 11px;
+}
+.border-radius{
+  border-radius: 0.3rem;
+}
+.news-feed{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 1rem;
+}
+.news-card{
+  width: 100%;}
+@media (max-width: 900px){
+  .main-section{
+  display: flex;
+  flex-direction: column;
+  }
 
-@media (max-width: 760px){
-    aside{
-    height: 10vh;
+  aside{
+    flex:0 !important;
+  }
+
+  .news-feed{
+    display: block;
   }
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+

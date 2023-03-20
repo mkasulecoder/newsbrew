@@ -5,38 +5,38 @@ import { BiBuildingHouse } from "react-icons/bi";
 const Navbar = () => {
   return (
     <div>
-      <nav class='navbar navbar-expand-lg navbar-light bg-dark'>
-        <div class='container-fluid'>
-          <Link href='/' class='navbar-brand'>
+      <nav className='navbar navbar-expand-lg navbar-light'>
+        <div className='container-fluid'>
+          <Link href='/' className='navbar-brand'>
             <BiBuildingHouse width={72} height={46} />
           </Link>
           <button
             type='button'
-            class='navbar-toggler'
+            className='navbar-toggler'
             data-bs-toggle='collapse'
             data-bs-target='#navbarCollapse'
           >
-            <span class='navbar-toggler-icon'></span>
+            <span className='navbar-toggler-icon'></span>
           </button>
-          <div class='collapse navbar-collapse' id='navbarCollapse'>
-            <div class='navbar-nav ms-auto text-uppercase'>
-              <Link href='/build-on-lot/' class='nav-item nav-link active'>
+          <div className='collapse navbar-collapse' id='navbarCollapse'>
+            <div className='navbar-nav ms-auto text-capitalize'>
+              <Link href='/build-on-lot/' className='nav-item nav-link active'>
                 Top Stories
               </Link>
-              <Link href='/build-on-lot/' class='nav-item nav-link'>
+              <Link href='/build-on-lot/' className='nav-item nav-link'>
                 Tech News
               </Link>
-              <Link href='/build-on-lot/' class='nav-item nav-link'>
+              <Link href='/build-on-lot/' className='nav-item nav-link'>
                 Cryto
               </Link>
-              <Link href='/build-on-lot/' class='nav-item nav-link'>
+              <Link href='/build-on-lot/' className='nav-item nav-link'>
                 Business
               </Link>
             </div>
 
-            <div class='navbar-nav ms-auto'>
+            <div className='navbar-nav ms-auto'>
               <a
-                class='nav-item nav-link'
+                className='nav-item nav-link'
                 href='#myModal'
                 role='button'
                 data-bs-toggle='modal'
@@ -61,17 +61,17 @@ const Navbar = () => {
                       <div className='row'>
                         <div className='col-12'>
                           <div className='mb-3 position-relative'>
-                            <label class='form-label' for='inputEmail'>
+                            <label className='form-label' htmlFor='inputEmail'>
                               Email
                             </label>
                             <input
                               type='email'
-                              class='form-control'
+                              className='form-control'
                               id='inputEmail'
                               placeholder='Email'
                               required
                             />
-                            <div class='invalid-tooltip'>
+                            <div className='invalid-tooltip'>
                               Please enter a valid email address.
                             </div>
                           </div>
@@ -80,17 +80,20 @@ const Navbar = () => {
                       <div className='row'>
                         <div className='col-12'>
                           <div className='mb-3 position-relative'>
-                            <label class='form-label' for='inputPassword'>
+                            <label
+                              className='form-label'
+                              htmlFor='inputPassword'
+                            >
                               Password
                             </label>
                             <input
                               type='password'
-                              class='form-control'
+                              className='form-control'
                               id='inputPassword'
                               placeholder='Password'
                               required
                             />
-                            <div class='invalid-tooltip'>
+                            <div className='invalid-tooltip'>
                               Please enter your password to continue.
                             </div>
                           </div>
@@ -100,13 +103,13 @@ const Navbar = () => {
                         <div className=' col-12'>
                           <div className='form-check'>
                             <input
-                              class='form-check-input'
+                              className='form-check-input'
                               type='checkbox'
                               id='checkRemember'
                             />
                             <label
                               className='form-check-label'
-                              for='checkRemember'
+                              htmlFor='checkRemember'
                             >
                               Remember me
                             </label>
