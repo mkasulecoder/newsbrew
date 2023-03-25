@@ -19,16 +19,18 @@ const WeatherCard = () => {
       });
   }, []);
   return (
-    <div className='weather-card text-white my-2 p-1 w-100'>
-      <h3>{weatherData.timezone}</h3>
-      <h1>
-        {weatherData.current_weather?.temperature}
-        {weatherData.hourly_units?.temperature_2m}
-      </h1>
-      <p className='my-0'>
-        Wind Speed: {weatherData.current_weather?.windspeed} <br />
-      </p>
-    </div>
+    <>
+      <div className='weather-card text-white my-2 p-1 w-100'>
+        <h3>{weatherData.timezone}</h3>
+        <h1>
+          {weatherData.current_weather?.temperature}
+          {weatherData.hourly_units?.temperature_2m}
+        </h1>
+        <p className='my-0'>
+          Wind Speed: {weatherData.current_weather?.windspeed} <br />
+        </p>
+      </div>
+    </>
   );
 };
 

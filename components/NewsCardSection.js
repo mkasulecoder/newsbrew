@@ -1,46 +1,40 @@
 import axios from "axios";
+import Link from "next/link";
 import { useState, useEffect } from "react";
-import NewsCard from "./NewsCard";
+import NewsCard from "./News";
 
-const apiKey = process.env.PRIVATE_API_KEY;
-const apiUrl =
-  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=743db947f4024af89745387004172edb";
-console.log(apiKey);
-
-function News() {
+function NewsCardSection() {
   //Instantiate Data
   const [newsData, setNewsData] = useState([]);
 
-  //Assign Data
   useEffect(() => {
     axios
-      .get(apiUrl)
+      .get("http://localhost:3003/api/news")
       .then((response) => {
-        setNewsData(response.data.articles);
+        setNewsData(response.data);
       })
       .catch((error) => {
-        error.response.data;
+        console.log("Error: " + error.message);
       });
   }, []);
-
   return (
-    <div>
+    <>
       <div className='news-feed'>
         {newsData &&
           newsData.map((news, id) => (
             <NewsCard
               title={news.title}
-              desc={news.description}
-              content={news.content}
               url={news.url}
+              desc={news.description}
+              name={news.name}
               date={news.publishedAt}
-              name={news.source.name}
-              key={news.source.id}
+              // image={news.props.image}
+              key={id}
             />
           ))}
       </div>
-    </div>
+    </>
   );
 }
 
-export default News;
+export default NewsCardSection;

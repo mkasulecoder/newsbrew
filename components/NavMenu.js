@@ -1,20 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import { BiBuildingHouse } from "react-icons/bi";
+import { CgDarkMode } from "react-icons/cg";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className='navbar navbar-expand-lg bg-aqua'>
+    <>
+      <nav className='navbar navbar-expand-lg'>
         <div className='container-fluid'>
-          <Link href='/' className='navbar-brand'>
-            <Image
-              src='/logo-no-bg.png'
-              width={150}
-              height={60}
-              alt='News Brew Logo'
-            />
-          </Link>
+          <div className='navbar-brand'>
+            <Link href='/'>
+              <Image
+                src='/logo-no-bg.png'
+                alt='News Brew Logo'
+                width={150}
+                height={50}
+              />
+            </Link>
+          </div>
           <button
             type='button'
             className='navbar-toggler'
@@ -25,23 +27,17 @@ const Navbar = () => {
           </button>
           <div className='collapse navbar-collapse' id='navbarCollapse'>
             <div className='navbar-nav ms-auto text-capitalize'>
-              <Link href='/build-on-lot/' className='nav-item nav-link active'>
-                Top Stories
-              </Link>
-              <Link href='/build-on-lot/' className='nav-item nav-link'>
-                Tech News
-              </Link>
-              <Link href='/build-on-lot/' className='nav-item nav-link'>
-                Cryto
-              </Link>
-              <Link href='/build-on-lot/' className='nav-item nav-link'>
-                Business
-              </Link>
+              <CgDarkMode
+                id='reading-mode'
+                size={30}
+                role='button'
+                aria-label='Toggle dark mode'
+              />
             </div>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 
