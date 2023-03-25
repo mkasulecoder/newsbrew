@@ -1,37 +1,42 @@
-# newsbrew (Your Onestop brew of news without ads)
-A news application that talks about top stories in business, politics, crypto, electric, cars, and much more.
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# News App
+This is a simple news app that allows users to view and read the latest news articles from various sources. The app is built using React, Next.js, and Axios.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+## Installation
+1. Clone the repository to your local machine:
 ```
+git clone https://github.com/yourusername/news-app.git
+```
+2. Navigate to the project directory:
+```
+cd news-app
+```
+3. Install the dependencies:
+```
+npm install
+```
+4. Start the development server:
+```
+npm run dev
+```
+5. Open the app in your browser by navigating to http://localhost:3003.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+Upon opening the app, you will be presented with a list of the latest news articles. You can click on each article to read more about it.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can also use the search bar at the top of the page to search for articles by keyword.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Technologies
+The app is built using the following technologies:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- React - A JavaScript library for building user interfaces.
+- Next.js - A framework for building server-side rendered React applications.
+- Axios - A library for making HTTP requests.
+## APIs
+The app uses the following APIs to retrieve news articles:
 
-## Learn More
+News API - A RESTful API that provides news articles from various sources.
+## Credits
+This app was built by Mark Kasule as a project for API Data fetching.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+## License
+This app is licensed under the MIT <strong>License</strong>.
